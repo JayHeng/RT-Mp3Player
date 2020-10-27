@@ -2942,9 +2942,6 @@
             </file>
         </group>
         <file>
-            <name>$PROJ_DIR$\..\app.c</name>
-        </file>
-        <file>
             <name>$PROJ_DIR$\..\app.h</name>
         </file>
         <file>
@@ -2964,6 +2961,9 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\mp3_config.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\mp3_main.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\usb_host_config.h</name>
@@ -3071,7 +3071,7 @@
             <name>$PROJ_DIR$\..\..\..\..\..\..\devices\MIMXRT1011\utilities\debug_console\fsl_debug_console.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\..\devices\MIMXRT1011\utilities\debug_console\fsl_debug_console.h</name>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\devices\MIMXRT1011\utilities\debug_console\FSL_DEBUG_CONSOLE.h</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\..\..\..\devices\MIMXRT1011\utilities\debug_console\fsl_debug_console_conf.h</name>
