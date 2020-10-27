@@ -1,2 +1,2 @@
-# RT-AudioPlayer
-An audio player based on i.MXRT1010+emWin+USB+FatFS+Helix MP3 | 一款基于i.MXRT的音频播放器
+# RT-Mp3Player
+A MP3 player based on i.MXRT1010+emWin+USB+FatFS+Helix MP3 | 一款基于i.MXRT的MP3播放器
