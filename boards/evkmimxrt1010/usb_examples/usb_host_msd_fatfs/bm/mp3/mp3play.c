@@ -1,4 +1,5 @@
 #include "mp3play.h"
+#include "mp3_config.h"
 #include "ff.h"
 #include "string.h"
 #include "FSL_DEBUG_CONSOLE.h"
@@ -31,15 +32,15 @@ void close_wave_file(void)
 void open_wave_file(void)
 {
     FRESULT error;
-    error = f_open(&f_wave, _T("1:/tma.pcm"), (FA_WRITE | FA_CREATE_ALWAYS));
+    error = f_open(&f_wave, _T(PCM_FILEPATH), (FA_WRITE | FA_CREATE_ALWAYS));
     if (error)
     {
-        printf("open tma.pcm fail.\r\n");
+        printf("open decoded pcm file fail.\r\n");
         while(1);
     }    
     else
     {
-        printf("open tma.pcm done.\r\n");
+        printf("open decoded pcm file done.\r\n");
     }
 }
 void mp3_fill_buffer(u16* buf,u16 sample_cnt,u8 nch)
@@ -150,7 +151,7 @@ u8 mp3_get_info(u8 *pname,__mp3ctrl* pctrl)
 
 	if(fmp3&&buf)//内存申请成功
 	{ 		
-		res = f_open(fmp3,("1:/tma.mp3"),FA_READ);//打开文件
+		res = f_open(fmp3,(MP3_FILEPATH),FA_READ);//打开文件
 		res=f_read(fmp3,(char*)buf,5*1024,&br);
 		if(res==0)//读取文件成功,开始解析ID3V2/ID3V1以及获取MP3信息
 		{  
@@ -341,7 +342,7 @@ u8 mp3_play_song(u8* fname)
 		printf("samplerate:%d\r\n",   my_mp3_ctrl.samplerate);	
 		printf("  totalsec:%d\r\n",   my_mp3_ctrl.totsec); 		
 		mp3decoder=MP3InitDecoder(); 					//MP3解码申请内存
-		res=f_open(&audioFile,("1:/tma.mp3"),FA_READ);	//打开文件
+		res=f_open(&audioFile,(MP3_FILEPATH),FA_READ);	//打开文件
 	}
     else
     {

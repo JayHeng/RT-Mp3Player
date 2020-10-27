@@ -2963,6 +2963,9 @@
             <name>$PROJ_DIR$\..\host_msd_fatfs.h</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\..\mp3_config.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\usb_host_config.h</name>
         </file>
     </group>

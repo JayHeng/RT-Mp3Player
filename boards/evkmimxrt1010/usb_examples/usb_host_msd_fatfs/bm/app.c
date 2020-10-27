@@ -17,6 +17,7 @@
 #include "fsl_sysmpu.h"
 #endif /* FSL_FEATURE_SOC_SYSMPU_COUNT */
 #include "app.h"
+#include "mp3_config.h"
 #include "board.h"
 #include "GUI_FontIntern.h"
 
@@ -821,14 +822,14 @@ void Audio_task()
         __ASM("nop");
     }
     USBDISK_FatFsInit();
-    mp3_play_song("tma.mp3");
+    mp3_play_song(MP3_FILENAME);
     tx_send_dummy();
     while (1)
     {
         RES = task_audio_tx();
         if(RES == 0)
         {
-          mp3_play_song("tma.mp3");
+          mp3_play_song(MP3_FILENAME);
           tx_send_dummy();
         }
         
