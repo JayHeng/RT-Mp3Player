@@ -7,7 +7,7 @@ i.MXRT1011是恩智浦i.MXRT四位数系列的入门型号，虽然是入门级�
 
 功能模块简图：
 
-![](doc/RT-Mp3Player_BlockDiagram_v0.1.PNG)
+![](doc/RT-Mp3Player_BlockDiagram_v0.2.PNG)
 
 这个设计目前还处于初级阶段，但已经实现了最核心的mp3文件解码与播放。设计主要参考了SDK包里的两个例程：通过USB读取U盘中的音频源文件（usb_host_msd_fatfs），使用I2C对Codec进行设置后使用SAI和DMA进行数据的传输（sai）.
 
